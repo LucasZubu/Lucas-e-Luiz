@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="floating">Nome</ion-label>
+    <ion-input  [(ngModel)]="nome"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">E-mail</ion-label>
+    <ion-input [(ngModel)]="email" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Cell</ion-label>
+    <ion-input [(ngModel)]="cell"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Assunto</ion-label>
+    <ion-input [(ngModel)]="ass"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Mensagem</ion-label>
+    <ion-textarea clearOnEdit="true" [(ngModel)]="msg"></ion-textarea>
+  </ion-item>
+
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="presentActionSheet()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="presentAlert()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
